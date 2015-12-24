@@ -158,16 +158,16 @@ SolutionSet SolvePuzzle(vector<piece*> pieces, PuzzlePad& pad, unsigned startX, 
 					block->Place(i,j);
 
 					// continue if blank part(s) of puzzle pad is not solvable
-					if(IsSolvable(pad))
+					//if(IsSolvable(pad))
 					{
 						// avoid duplicated search
 						int startAtX = 0;
 						int startAtY = 0;
-						if(pieces.back()->GetType()==block->GetType())
-						{
-							startAtX = i;
-							startAtY = j+1;
-						}
+						//if(pieces.back()->GetType()==block->GetType())
+						//{
+						//	startAtX = i;
+						//	startAtY = j+1;
+						//}
 						// find the solution recursively
 						auto newSolutions = SolvePuzzle(pieces, pad, startAtX, startAtY);
 
